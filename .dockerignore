@@ -1,0 +1,11 @@
+.git
+.idea
+.vscode
+.rag_cache
+__pycache__
+*.pyc
+venv
+.venv
+.pytest_cache
+documents
+tests

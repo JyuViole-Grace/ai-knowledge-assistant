@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+
+      # The test suite uses fakes for the embedding model, reranker and
+      # Ollama, so the heavy ML dependencies (torch, sentence-transformers)
+      # are not needed here.
+      - name: Install test dependencies
+        run: >
+          pip install numpy requests rank-bm25 pypdf python-docx
+          fastapi httpx pytest
+
+      - name: Run tests
+        run: pytest -q
