@@ -175,7 +175,7 @@ Answer generated from the verbatim quotes only, with validated [E1] citations
 Requirements: Python 3.10+, [Ollama](https://ollama.com).
 
 ```bash
-git clone https://github.com/<your-user>/ai-knowledge-assistant.git
+git clone https://github.com/JyuViole-Grace/ai-knowledge-assistant.git
 cd ai-knowledge-assistant
 python -m venv venv
 source venv/bin/activate          # Windows: .\venv\Scripts\Activate.ps1
