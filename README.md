@@ -347,7 +347,7 @@ requirements.txt  requirements-dev.txt  pytest.ini  .env.example  LICENSE
 - [x] CLI and FastAPI service with path sandbox and optional API key.
 - [x] Unit tests; retrieval benchmark with ablations; strict grading;
       must-abstain tests; works on any document set.
-- [ ] Confirm the GitHub Actions workflow is green after the first push.
+- [x] Confirm the GitHub Actions workflow is green after the first push.
 - [ ] Verify the Docker setup end to end.
 - [ ] Measure `--bm25-prefix` on the Russian case study (Italian: hybrid R@10 58% → 75%).
 - [ ] Compare rerankers on the Russian case study.
